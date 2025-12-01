@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 
-/* TOP EMERGENCY STRIP */
+/* ───────── TOP EMERGENCY STRIP ───────── */
 .top-emergency {
   background: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -50,7 +50,7 @@ a {
   color: #c5162e;
 }
 
-/* HEADER */
+/* ───────── HEADER / LOGO / NAV ───────── */
 .site-header {
   background: linear-gradient(90deg, #043b44, #086c6d);
   color: #ffffff;
@@ -69,7 +69,7 @@ a {
   gap: 16px;
 }
 
-/* LOGO (3D) */
+/* 3D Logo */
 .logo-area {
   display: flex;
   align-items: center;
@@ -106,7 +106,7 @@ a {
   opacity: 0.85;
 }
 
-/* NAV */
+/* Desktop nav */
 .main-nav {
   display: flex;
   align-items: center;
@@ -125,7 +125,7 @@ a {
   transform: translateY(-1px);
 }
 
-/* NAV TOGGLE (MOBILE) */
+/* Mobile nav toggle */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -157,51 +157,47 @@ a {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* HERO */
+/* ───────── HERO (Doctor) ───────── */
+/* अब hero हमेशा एक ही column रहेगा: ऊपर गोल फोटो, नीचे text */
 .hero {
   background: radial-gradient(circle at 0% 0%, #35d6d3 0, #008f7e 40%, #005d4a 100%);
   color: #ffffff;
-  padding: 26px 16px 40px;
+  padding: 24px 16px 34px;
 }
 
 .hero-inner {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 18px;
 }
 
-/* circular doctor */
 .hero-photo-wrap {
   display: flex;
   justify-content: center;
 }
 
 .hero-photo {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 10px solid #ffce45;
+  border: 9px solid #ffce45;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
-/* hero text */
-.hero-text {
-  text-align: center;
-}
-
 .hero-title {
-  margin: 0 0 4px;
+  margin: 4px 0 4px;
   font-size: 30px;
   letter-spacing: 0.04em;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
 }
 
 .hero-doctor {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   font-size: 22px;
   color: #eaffff;
 }
@@ -209,13 +205,13 @@ a {
 .hero-sub {
   margin: 4px 0;
   font-size: 14px;
-  opacity: 0.95;
+  opacity: 0.97;
 }
 
 .hero-points {
   list-style: none;
   padding: 0;
-  margin: 14px 0 18px;
+  margin: 12px 0 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -230,7 +226,7 @@ a {
   gap: 12px;
 }
 
-/* BUTTONS */
+/* ───────── BUTTONS ───────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -241,8 +237,8 @@ a {
   font-weight: 600;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
-    color 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 .btn-primary {
@@ -271,7 +267,7 @@ a {
   width: 100%;
 }
 
-/* CARDS */
+/* ───────── GENERIC CARD ───────── */
 .card {
   max-width: 1100px;
   margin: 14px auto;
@@ -281,7 +277,6 @@ a {
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
 }
 
-/* SECTION TITLES */
 .section-title {
   margin: 0 0 8px;
   font-size: 18px;
@@ -294,7 +289,7 @@ a {
   color: #344051;
 }
 
-/* STATS */
+/* ───────── STATS ───────── */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -319,7 +314,7 @@ a {
   font-size: 13px;
 }
 
-/* FACILITY STRIP */
+/* ───────── FACILITY STRIP (3 photos) ───────── */
 .facility-strip .facility-photos {
   margin-top: 10px;
   display: grid;
@@ -336,8 +331,8 @@ a {
 
 .facility-item img {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  height: 160px;          /* fixed height */
+  object-fit: cover;      /* frame से बाहर न निकले */
 }
 
 .facility-caption {
@@ -345,7 +340,7 @@ a {
   font-size: 13px;
 }
 
-/* TWO-COL LAYOUT */
+/* ───────── CONTACT TWO-COL ───────── */
 .two-col {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 2fr);
@@ -360,7 +355,7 @@ a {
   text-decoration: underline;
 }
 
-/* FORM */
+/* Appointment form */
 .appointment-form label {
   display: block;
   font-size: 13px;
@@ -392,7 +387,7 @@ a {
   color: #6b7280;
 }
 
-/* BULLET LIST */
+/* Bullet list */
 .bullet-list {
   margin: 4px 0 0;
   padding-left: 0;
@@ -404,7 +399,7 @@ a {
   margin-bottom: 4px;
 }
 
-/* GALLERY */
+/* ───────── GALLERY ───────── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -429,13 +424,13 @@ a {
   font-size: 13px;
 }
 
-/* MAP */
+/* ───────── MAP ───────── */
 .map-wrapper iframe {
   border-radius: 18px;
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.35);
 }
 
-/* FOOTER */
+/* ───────── FOOTER ───────── */
 .site-footer {
   margin-top: 18px;
   padding: 16px 12px 22px;
@@ -469,26 +464,21 @@ a {
   opacity: 0.85;
 }
 
-/* RESPONSIVE */
+/* ───────── RESPONSIVE ───────── */
+
+/* Tablet */
 @media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .hero-photo {
-    width: 190px;
-    height: 190px;
+  .facility-strip .facility-photos,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .two-col {
     grid-template-columns: 1fr;
-  }
-
-  .facility-strip .facility-photos,
-  .gallery-grid,
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .top-emergency-inner {
@@ -497,7 +487,29 @@ a {
   }
 }
 
+/* Mobile */
 @media (max-width: 700px) {
+  /* Header – logo + menu पूरी तरह center */
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-area {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-text-main {
+    font-size: 16px;
+  }
+
+  .logo-text-sub {
+    font-size: 10px;
+  }
+
+  /* Mobile nav dropdown */
   .main-nav {
     position: absolute;
     top: 100%;
@@ -522,13 +534,9 @@ a {
     display: flex;
   }
 
-  .header-inner {
-    padding: 10px 14px;
-  }
-
+  .stats-grid,
   .facility-strip .facility-photos,
-  .gallery-grid,
-  .stats-grid {
+  .gallery-grid {
     grid-template-columns: 1fr;
   }
 
@@ -540,11 +548,8 @@ a {
     font-size: 19px;
   }
 
-  .logo-text-main {
-    font-size: 15px;
-  }
-
-  .logo-text-sub {
-    font-size: 10px;
+  .hero-photo {
+    width: 180px;
+    height: 180px;
   }
 }
