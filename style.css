@@ -554,3 +554,65 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* ===== MOBILE NAV FIX ===== */
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;              /* by default chhupa hua */
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #041b26;
+    padding: 0.75rem 1.5rem 1rem;
+    position: absolute;
+    top: 60px;                  /* header ke thoda neeche */
+    right: 10px;
+    left: 10px;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+
+  .main-nav.nav-open {
+    display: flex;              /* button dabane par dikh jayega */
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+  }
+
+  .nav-toggle span::before,
+  .nav-toggle span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+
+  .nav-toggle span::before {
+    top: -6px;
+  }
+
+  .nav-toggle span::after {
+    top: 6px;
+  }
+}
+
+/* desktop me nav normal flex hi rahe, yaha kuch change nahi karna */
