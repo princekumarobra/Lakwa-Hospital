@@ -1,204 +1,244 @@
-body {
+/* ----------------------------------------------------
+   BASIC RESET + BODY
+---------------------------------------------------- */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background: #eef4fa;
 }
 
-/* TOP BAR */
+body {
+  background: #f4f7fa;
+  color: #333;
+  line-height: 1.5;
+  padding-bottom: 50px;
+}
+
+/* ----------------------------------------------------
+   HEADER TOP BAR
+---------------------------------------------------- */
 .top-bar {
+  width: 100%;
   background: #0b3d91;
   color: #fff;
-  padding: 6px 10px;
+  padding: 8px 18px;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
 }
 
-/* HEADER */
-header {
-  padding: 12px 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-}
-
+/* ----------------------------------------------------
+   LOGO 3D PREMIUM
+---------------------------------------------------- */
 .logo-mark {
-  background: #0b3d91;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: radial-gradient(circle at 30% 20%, #ffffff 0%, #44ffb2 25%, #0077ff 80%);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35),
+              inset 0 2px 4px rgba(255,255,255,0.6);
+  border: 2px solid rgba(255,255,255,0.9);
+}
+
+.logo-text {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-title-en {
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .logo-title-hi {
-  font-size: 13px;
-  color: #444;
+  font-size: 12px;
+  color: #f0f0f0;
 }
 
-.header-phone {
-  color: #0b3d91;
-  font-weight: bold;
-  margin-left: 6px;
-}
-
-.btn-call-header {
-  margin-left: 12px;
-  padding: 6px 14px;
-  background: #0b3d91;
-  color: #fff;
-  border: none;
-  border-radius: 7px;
-}
-
-/* HERO */
+/* ----------------------------------------------------
+   HERO SECTION
+---------------------------------------------------- */
 .hero {
   text-align: center;
-  padding: 20px;
+  padding: 30px 15px;
+  background: linear-gradient(to bottom, #e8f5ff, #f8fbff);
 }
 
-.doctor-photo-wrap {
-  width: 150px;
-  height: 150px;
-  margin: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid gold;
-  margin-top: 10px;
-}
-
-.doctor-photo {
-  width: 100%;
-  height: 100%;
+.hero img {
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  border: 6px solid gold;
   object-fit: cover;
 }
 
-.hospital-name {
+.hero .hospital-name {
   font-size: 26px;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 12px;
 }
 
-.doctor-name {
-  font-size: 20px;
-  margin-top: 5px;
+.hero .doctor-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 4px;
 }
 
-.doctor-qual {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #444;
-}
-
-.hero-badges span {
-  display: inline-block;
-  background: #e8f1ff;
-  padding: 6px 10px;
-  margin: 3px;
-  border-radius: 6px;
-}
-
+/* ----------------------------------------------------
+   BUTTONS
+---------------------------------------------------- */
 .btn-primary {
-  background: #0b3d91;
+  background: #0066ff;
   color: #fff;
   padding: 10px 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
+  font-size: 15px;
+  margin: 6px;
 }
 
 .btn-outline {
-  background: #fff;
-  border: 2px solid #0b3d91;
-  color: #0b3d91;
-  padding: 8px 16px;
-  border-radius: 8px;
-  margin-left: 8px;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+  margin: 6px;
 }
 
-/* STATS */
-.card {
-  background: #fff;
-  margin: 15px;
-  padding: 15px;
-  border-radius: 15px;
-}
-
-.stats-grid {
+/* ----------------------------------------------------
+   BLUE STATS CARDS
+---------------------------------------------------- */
+.stats-card {
   display: flex;
-  justify-content: space-around;
+  gap: 15px;
+  padding: 15px;
+  justify-content: space-between;
 }
 
 .stat-box {
+  flex: 1;
+  background: linear-gradient(to bottom right, #007bff, #0058d4);
+  padding: 20px 10px;
+  border-radius: 18px;
+  color: #fff;
   text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
 .stat-number {
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-/* SMALL FRAMED PHOTO */
-.facility-photo-frame {
-  max-width: 650px;
-  margin: 1.5rem auto 0;
+/* ----------------------------------------------------
+   SECTION CARD BOXES (white card)
+---------------------------------------------------- */
+.card {
+  background: #fff;
+  margin: 15px;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ----------------------------------------------------
+   NEW – PHOTO FRAME FIX (Blue box niche wali 3 photos)
+---------------------------------------------------- */
+
+.facility-photos {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.facility-item {
+  flex: 1 1 0;
+  min-width: 180px;
   border-radius: 18px;
   overflow: hidden;
-  border: 5px solid #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: #000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
-.facility-photo-frame img {
+.facility-item img {
   width: 100%;
-  height: 230px;
+  height: 210px;
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
-  .facility-photo-frame img {
-    height: 180px;
-  }
+.facility-caption {
+  background: #fff;
+  font-size: 13px;
+  padding: 6px 10px 10px;
 }
 
-/* TWO COL */
-.two-col {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+/* ----------------------------------------------------
+   PHOTO GALLERY (नीचे वाली)
+---------------------------------------------------- */
 
-.two-col .card {
-  flex: 1;
-  min-width: 280px;
-}
-
-/* GALLERY */
 .gallery-grid {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .gallery-item {
-  width: 32%;
-  border-radius: 10px;
+  flex: 1 1 0;
+  min-width: 180px;
+  border-radius: 18px;
   overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 160px;
+  height: 210px;
   object-fit: cover;
 }
 
-/* FOOTER */
-.footer-bottom {
+.gallery-caption {
+  background: #fff;
+  font-size: 13px;
+  padding: 6px 10px 10px;
+}
+
+/* MOBILE — 1 photo per row */
+@media (max-width: 768px) {
+  .facility-item,
+  .gallery-item {
+    flex: 1 1 100%;
+  }
+
+  .stats-card {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+footer {
   text-align: center;
-  padding: 20px;
-  color: #333;
+  padding: 25px 15px;
+  color: #666;
+  font-size: 14px;
 }
