@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Lakwa Hospital Obra - लकवा अस्पताल, डॉ. चंदन कुमार | Obra Aurangabad Bihar</title>
+<title>Lakwa Hospital Obra - लकवा अस्पताल | Dr. Chandan Kumar</title>
 
-    <!-- BASIC SEO -->
-    <meta name="description" content="Lakwa Hospital Obra, Dr. Chandan Kumar - लकवा, नसों की कमजोरी, चक्कर आना, हाथ-पैर सुन्न होना, दर्द आदि का आधुनिक एवं विशेषज्ञ उपचार। 24 घंटे आपातकालीन सेवा।" />
-    <meta name="keywords" content="Lakwa Hospital Obra, लकवा अस्पताल, Dr Chandan Kumar, paralysis treatment Obra, neuro hospital Obra" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- JS -->
-    <script defer src="main.js"></script>
+<link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span>लख्वा अस्पताल, ओबरा - औरंगाबाद, बिहार</span>
+    <span>24×7 आपातकालीन सेवा उपलब्ध</span>
+</div>
 
 <!-- HEADER -->
 <header>
@@ -29,16 +23,13 @@
         <div class="logo-mark">LH</div>
         <div class="logo-text">
             <span class="logo-title-en">Lakwa Hospital Obra</span>
-            <span class="logo-title-hi">लकवा अस्पताल : Obra, Bihar</span>
+            <span class="logo-title-hi">लख्वा अस्पताल : Obra, Bihar</span>
         </div>
     </div>
 
     <div class="header-right">
-        <div>
-            <span>आपातकालीन संपर्क:</span>
-            <a href="tel:+919771737437" class="highlight-phone">+91 97717 37437</a>
-        </div>
-
+        <span class="header-label">आपातकालीन सहायता :</span>
+        <a href="tel:+919777173437" class="header-phone">+91 97717 37437</a>
         <button class="btn-call-header" onclick="callNow()">📞 अभी कॉल करें</button>
     </div>
 </header>
@@ -47,30 +38,37 @@
 <section class="hero">
     <div class="hero-inner hero-centered">
 
-        <!-- Doctor Photo -->
+        <!-- Doctor photo -->
         <div class="doctor-photo-wrap">
-            <img src="doctorphoto.png" alt="डॉ. चंदन कुमार - Lakwa Hospital Obra" class="doctor-photo" />
+            <img src="doctorphoto.png" class="doctor-photo" alt="डॉ. चंदन कुमार - Lakwa Hospital Obra" />
         </div>
 
         <div class="hero-text">
-            <div class="hospital-name">लकवा अस्पताल</div>
+            <div class="hospital-name">लख्वा अस्पताल</div>
             <div class="doctor-name">डॉ. चंदन कुमार</div>
             <div class="doctor-qual">
-                M.B.E.H (Patna) – लकवा, नसों की कमजोरी, चक्कर आना, हाथ-पैर सुन्न होना एवं न्यूरो सम्बंधित बीमारियों की विशेष देखरेख 24 घंटे उपलब्ध।
+                M.B.E.H (Patna) – लकवा, नसों की कमजोरी, चक्कर आना, हाथ-पैर सुन होना,
+                दर्द आदि के इलाज हेतु विशेष उपचार 24 घंटे उपलब्ध।
             </div>
         </div>
 
-        <div class="hero-actions">
-            <button class="btn-primary" onclick="callNow()">📞 अपॉइंटमेंट के लिए कॉल करें</button>
-            <button class="btn-outline" onclick="scrollToAppointment()">📩 ऑनलाइन अपॉइंटमेंट बुक करें</button>
+        <div class="hero-badges">
+            <span>✔ विशेष लकवा उपचार</span>
+            <span>✔ अनुभवी डॉक्टर्स</span>
+            <span>✔ आपातकालीन सुविधाएं</span>
         </div>
 
+        <div class="hero-actions">
+            <button class="btn-primary" onclick="callNow()">📞 अभी कॉल करें</button>
+            <button class="btn-outline" onclick="scrollToAppointment()">🌐 ऑनलाइन अपॉइंटमेंट बुक करें</button>
+        </div>
     </div>
 </section>
 
 <!-- STATS -->
 <section class="card stats-card">
     <div class="stats-grid">
+
         <div class="stat-box">
             <div class="stat-icon">👨‍⚕️</div>
             <div class="stat-number">10+</div>
@@ -88,145 +86,100 @@
             <div class="stat-number">24×7</div>
             <div class="stat-label">आपातकालीन सेवा</div>
         </div>
+
     </div>
 </section>
 
-<!-- HOSPITAL WIDE PHOTOS -->
+<!-- SMALL FEATURED SINGLE FRAMED PHOTO -->
 <section class="card facility-strip">
     <h2 class="section-title">हमारी चिकित्सा एवं सुविधाएं</h2>
-    <p class="facility-text">अत्याधुनिक सुविधा, योग्य डॉक्टर, और तेज़ उपचार हेतु साफ-सुथरा वातानुकूल उपचार कक्ष।</p>
+    <p class="facility-text">
+        अत्याधुनिक सुविधाएं, योग्य डॉक्टर, और तेज़ उपचार हेतु साफ-सुथरा वातानुकूल उपचार कक्ष।
+    </p>
 
-    <div class="facility-photos">
-
-        <div class="facility-item">
-            <img src="IMG_20251201_114319.jpg" alt="अस्पताल का बाहरी प्रवेश द्वार" />
-            <span>अस्पताल का बाहरी दृश्य</span>
-        </div>
-
-        <div class="facility-item">
-            <img src="IMG_20251201_114316.jpg" alt="क्लिनिक के अंदर दवाई की अलमारी" />
-            <span>क्लिनिक का अंदरूनी दृश्य</span>
-        </div>
-
-        <div class="facility-item">
-            <img src="IMG_20251201_114256.jpg" alt="डॉक्टर का टेबल और कुर्सी" />
-            <span>डॉक्टर का कक्ष</span>
-        </div>
-
+    <div class="facility-photo-frame">
+        <img src="IMG_20251201_114319.jpg" alt="अस्पताल का बाहरी दृश्य" />
     </div>
 </section>
 
 <!-- CONTACT + MAP -->
 <section class="two-col">
-
-    <!-- LEFT -->
     <div class="card" id="contact-us">
         <h2 class="section-title">Contact Us / ऑनलाइन अपॉइंटमेंट</h2>
 
-        <p><strong>पता:</strong> अशोक कॉलोनी के ठीक सामने, NH-139, नवजीवन पानी टंकी, ओबरा, औरंगाबाद, बिहार - 824124</p>
         <p>
-            <strong>मोबाइल:</strong>
-            <a href="tel:+919771737437" class="highlight-phone">+91 97717 37437</a>,
-            <a href="tel:+918210660911" class="highlight-phone">+91 82106 06911</a>
+            <strong>पता :</strong> ओबरा कॉलेज के ठीक सामने, NH-139, जवाहरलाल पानी टंकी, ओबरा, बिहार - 824124
         </p>
 
-        <form id="appointmentForm">
-            <label for="name">👤 आपका नाम</label>
-            <input id="name" name="name" type="text" required placeholder="अपना नाम दर्ज करें" />
+        <p>
+            <strong>मोबाइल :</strong>
+            <a href="tel:+919777173437" class="highlight-phone">+91 97717 37437</a> ,
+            <a href="tel:+918210606911" class="highlight-phone">+91 82106 06911</a>
+        </p>
 
-            <label for="phone">📞 मोबाइल नंबर</label>
-            <input id="phone" name="phone" type="tel" required placeholder="10 अंकों का मोबाइल नंबर" />
-
-            <label for="date">📅 पसंदीदा तिथि</label>
-            <input id="date" name="date" type="date" />
-
-            <label for="problem">📝 समस्या</label>
-            <textarea id="problem" name="problem" placeholder="आपकी समस्या (जैसे – लकवा, नसों की कमजोरी, दर्द आदि)"></textarea>
-
-            <button type="submit" class="btn-submit">📨 अपॉइंटमेंट भेजें</button>
-        </form>
+        <p class="small-note">फॉर्म भरते ही आपका कॉल किया जाएगा।</p>
     </div>
 
-    <!-- RIGHT -->
     <div class="card">
         <h2 class="section-title">हमारा स्थान (Google Map)</h2>
-
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.345!2d84.381!3d24.734!2m3!1f0!2f0!3f0!3m2!1i0!2i0!4f13.1!3m3!1m2!1s0x390d050b9c432b!2sObra%2C%20Aurangabad%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <p class="small-note"><strong>पता:</strong> अशोक कॉलोनी के ठीक सामने, NH-139, ओबरा, बिहार - 824124</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.345!2d84.381!3d24.734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sin!4v123456"
+                loading="lazy"></iframe>
     </div>
 </section>
 
-<!-- ABOUT US -->
+<!-- ABOUT -->
 <section class="card" id="about-us">
     <h2 class="section-title">About Us - हमारा अस्पताल</h2>
-
-    <p class="about-text">
-        हमारा अस्पताल लकवा (पैरालिसिस), नसों की समस्या, चक्कर आना, हाथ-पैर सुन्न होना, कमजोरी, दर्द आदि
-        से संबंधित विशेष उपचार प्रदान करता है।
+    <p>
+        हमारा अस्पताल लकवा (पैरालिसिस), नसों की कमजोरी, चक्कर आना, हाथ-पैर सुन होना, कमजोरी, दर्द आदि
+        के इलाज हेतु अनुभवी डॉक्टर्स की देखरेख में आधुनिक उपकरणों से उपचार प्रदान करता है।
     </p>
 
     <div class="pill-list">
-        <span class="pill">✔️ लकवा एवं नसों की विशेष उपचार</span>
-        <span class="pill">✔️ आधुनिक मशीनें एवं सेवाएं</span>
-        <span class="pill">✔️ आपातकालीन सेवा 24×7</span>
-        <span class="pill">✔️ योग्य एवं अनुभवी डॉक्टर</span>
+        <span class="pill">✔ लकवा एवं नसों का विशेष उपचार</span>
+        <span class="pill">✔ आधुनिक उपकरण एवं सुविधाएं</span>
+        <span class="pill">✔ आपातकालीन सेवा 24×7</span>
+        <span class="pill">✔ प्रशिक्षित एवं अनुभवी स्टाफ</span>
     </div>
 </section>
 
-<!-- PHOTO GALLERY -->
+<!-- GALLERY -->
 <section class="card">
     <h2 class="section-title">अस्पताल फोटो गैलरी</h2>
 
     <div class="gallery-grid">
 
         <div class="gallery-item">
-            <img src="IMG_20251201_114319.jpg" alt="अस्पताल का बाहरी प्रवेश द्वार" />
-            <div class="gallery-caption">अस्पताल का बाहरी प्रवेश द्वार</div>
+            <img src="IMG_20251201_114256.jpg" alt="" />
+            <div class="gallery-caption">अस्पताल का प्रवेश द्वार</div>
         </div>
 
         <div class="gallery-item">
-            <img src="IMG_20251201_114316.jpg" alt="क्लिनिक के अंदर का दृश्य" />
-            <div class="gallery-caption">क्लिनिक का अंदरूनी दृश्य</div>
+            <img src="IMG_20251201_114316.jpg" alt="" />
+            <div class="gallery-caption">दवाइयों का स्टोर</div>
         </div>
 
         <div class="gallery-item">
-            <img src="IMG_20251201_114258.jpg" alt="डॉक्टर का कक्ष" />
-            <div class="gallery-caption">डॉक्टर का कक्ष</div>
+            <img src="IMG_20251201_114258.jpg" alt="" />
+            <div class="gallery-caption">उपचार कक्ष</div>
         </div>
-
     </div>
-</section>
-
-<!-- PRIVACY POLICY -->
-<section class="card" id="privacy-policy">
-    <h2 class="section-title">Privacy Policy (गोपनीयता नीति)</h2>
-
-    <p class="about-text">
-        हम आपकी व्यक्तिगत जानकारी सुरक्षित रखते हैं और आपकी जानकारी का उपयोग केवल अपॉइंटमेंट एवं संपर्क के उद्देश्य से करते हैं।
-        आपकी जानकारी किसी तीसरे पक्ष के साथ साझा नहीं की जाती।
-    </p>
-</section>
-
-<!-- DISCLAIMER -->
-<section class="card" id="disclaimer">
-    <h2 class="section-title">Disclaimer (अस्वीकरण)</h2>
-
-    <p class="about-text">
-        यह वेबसाइट केवल जानकारी प्रदान करने के उद्देश्य से है। किसी भी प्रकार की उपचार संबंधित सलाह के लिए डॉक्टर से संपर्क करें।
-    </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <div class="footer-bottom">
-        <p>© 2025 लकवा अस्पताल, सर्वाधिकार सुरक्षित।</p>
-        <p class="designed-by">Designed & Developed by <span>Prince Kumar</span></p>
+        <p>© 2025 Lakwa Hospital, Obra Bihar</p>
+        <p>Designed & Developed by Prince Kumar</p>
     </div>
 </footer>
+
+<script>
+function callNow() { window.location.href = "tel:+919777173437"; }
+function scrollToAppointment() {
+    document.getElementById("contact-us").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>
