@@ -327,6 +327,22 @@
       © 2025 Lakwa Hospital, Obra Bihar<br />
       Designed &amp; Developed by Prince Kumar
     </p>
-  </footer>
+<footer class="site-footer">
+  ...
+</footer>
+
+<!-- mobile menu ke liye script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".nav-toggle");
+    const nav = document.querySelector(".main-nav");
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("nav-open");
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
