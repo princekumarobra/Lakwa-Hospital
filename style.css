@@ -30,10 +30,14 @@ body {
 }
 
 .top-bar-text {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   text-align: center;
-  text-shadow: 0 1px 0 #fee2e2, 0 2px 4px rgba(248, 113, 113, 0.6);
+  text-shadow: 0 1px 0 #fee2e2, 0 3px 6px rgba(248, 113, 113, 0.7);
+}
+
+.top-bar-text strong {
+  font-weight: 800;
 }
 
 .emergency-btn {
@@ -41,15 +45,15 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  padding: 0.35rem 1.3rem;
+  padding: 0.45rem 1.8rem;
   border-radius: 999px;
   background: #ff1744;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 800;
+  font-size: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.07em;
   animation: emergencyBlink 1.4s infinite;
 }
 
@@ -60,7 +64,7 @@ body {
   }
   50% {
     opacity: 0.6;
-    box-shadow: 0 0 0 10px rgba(255, 23, 68, 0);
+    box-shadow: 0 0 0 12px rgba(255, 23, 68, 0);
   }
   100% {
     opacity: 1;
@@ -111,12 +115,14 @@ body {
 .logo-text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .logo-main {
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 1px 0 #022c22, 0 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 .logo-sub {
@@ -370,11 +376,11 @@ main {
   margin: 0 auto;
   background-image: url("checkup.png");
   background-repeat: no-repeat;
-  background-size: 200% 300%; /* 2 columns x 4 rows approx */
+  background-size: 200% 300%; /* 2 columns x 4 rows */
   box-shadow: 0 6px 14px rgba(15, 23, 42, 0.15);
 }
 
-/* sprite positions – जरूरत हो तो बाद में थोड़ा adjust कर सकते हैं */
+/* sprite positions */
 .check-bp .checkup-icon       { background-position: 0%   0%;   }
 .check-pulse .checkup-icon    { background-position: 100% 0%;   }
 .check-thermo1 .checkup-icon  { background-position: 0%   33%;  }
@@ -391,6 +397,14 @@ main {
   gap: 16px;
 }
 
+.contact-info .section-text {
+  margin-bottom: 6px;
+}
+
+.contact-form {
+  min-height: 270px; /* height थोड़ा बड़ा */
+}
+
 .contact-form label {
   display: block;
   font-size: 0.86rem;
@@ -402,7 +416,7 @@ main {
 .contact-form select {
   width: 100%;
   margin-top: 3px;
-  padding: 7px 9px;
+  padding: 9px 10px;
   border-radius: 10px;
   border: 1px solid #d1d5db;
   font-size: 0.9rem;
@@ -427,8 +441,9 @@ main {
 
 .gallery-item img {
   width: 100%;
+  height: 190px;            /* fix height */
   border-radius: 14px;
-  object-fit: cover;
+  object-fit: cover;        /* portrait भी सही frame में */
 }
 
 .gallery-caption {
@@ -472,6 +487,25 @@ main {
 @media (max-width: 768px) {
   .site-header {
     flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+  }
+
+  .logo-area {
+    width: 100%;
+    justify-content: center;   /* logo text centre में */
+  }
+
+  .logo-text {
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 10px;
   }
 
   .main-nav {
@@ -487,10 +521,6 @@ main {
 
   .main-nav.nav-open {
     display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
   }
 
   .hero-card {
@@ -512,6 +542,10 @@ main {
 
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-form {
+    min-height: unset;
   }
 }
 
