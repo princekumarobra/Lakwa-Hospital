@@ -611,3 +611,26 @@ img {
     height: 170px;
   }
 }
+
+/* === FIX: Doctor photo hamesha circle frame me, centre me === */
+.hero-card img {
+  max-width: 220px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.6);
+}
+
+/* === FIX: Checkup services images visible === */
+.checkup-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background-image: url("checkup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
