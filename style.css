@@ -560,3 +560,61 @@ body {
     margin-inline: 8px;
   }
 }
+
+/* =========================
+   EXTRA FIXES (DECEMBER)
+   ========================= */
+
+/* 1) Doctor ka photo mobile par frame ke andar aur centred */
+@media (max-width: 720px) {
+  .hero-photo {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero-photo img {
+    object-fit: cover;
+    /* thoda upar se crop ho, face centre me aaye */
+    object-position: 50% 20%;
+  }
+}
+
+/* 2) Blue stats boxes ko hero ke thoda niche lana */
+.stats {
+  margin-top: 28px;  /* pehle 18px tha, ab gap zyada ho jayega */
+}
+
+/* 3) Checkup machines ke liye sprite positions sahi karna */
+/* checkup.png = 2 columns x 4 rows (total 8 images) */
+.checkup-img {
+  background-image: url("checkup.png");
+  background-repeat: no-repeat;
+  /* 2 column 4 row ka grid: 200% x 400% */
+  background-size: 200% 400%;
+}
+
+/* Row 1 */
+.checkup-1 { background-position: 0%   0%; }   /* left top  */
+.checkup-2 { background-position: 100% 0%; }   /* right top */
+
+/* Row 2 */
+.checkup-3 { background-position: 0%   33.33%; }
+.checkup-4 { background-position: 100% 33.33%; }
+
+/* Row 3 */
+.checkup-5 { background-position: 0%   66.66%; }
+.checkup-6 { background-position: 100% 66.66%; }
+
+/* Row 4 */
+.checkup-7 { background-position: 0%   100%; }
+.checkup-8 { background-position: 100% 100%; }
+
+/* 4) Footer ko pure black + white text karna */
+.site-footer {
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer-links a {
+  color: #f9fafb;
+}
