@@ -21,7 +21,6 @@
     --radius-pill: 999px;
     --transition-fast: 0.2s ease;
     --header-height: 72px;
-    --nav-breakpoint: 900px;
 }
 
 body {
@@ -30,8 +29,6 @@ body {
     color: var(--text-main);
     line-height: 1.6;
 }
-
-/* ---------- LAYOUT HELPERS ---------- */
 
 .container {
     width: 100%;
@@ -84,8 +81,8 @@ body {
 }
 
 .logo-badge {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%, #ffffff, #8be3dd 35%, #0F6B6F 80%);
     box-shadow:
@@ -105,17 +102,22 @@ body {
 .logo-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: #ffffff;
 }
 
 .logo-title-en {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.6),
+        0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .logo-title-hi {
     font-size: 12px;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 /* Nav links */
@@ -175,13 +177,12 @@ body {
 }
 
 .nav-open .main-nav {
-    max-height: 300px;
+    max-height: 320px;
     opacity: 1;
     pointer-events: auto;
 }
 
 /* ---------- HERO ---------- */
-
 .hero {
     background: radial-gradient(circle at top, #e6fafe 0, #f5f7fb 55%, #eff3ff 100%);
     padding: 32px 0 24px;
@@ -194,7 +195,6 @@ body {
     gap: 24px;
 }
 
-/* Doctor circular frame */
 .hero-photo-frame {
     width: 170px;
     height: 170px;
@@ -290,7 +290,6 @@ body {
     background: rgba(255, 255, 255, 0.85);
 }
 
-/* full width button */
 .btn-full {
     width: 100%;
 }
@@ -352,7 +351,7 @@ body {
     margin-top: 2px;
 }
 
-/* ---------- FACILITY STRIP (SERVICES) ---------- */
+/* ---------- SERVICES / FACILITY STRIP ---------- */
 
 .facility-strip {
     display: grid;
@@ -382,38 +381,6 @@ body {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
 }
 
-/* ---------- GALLERY ---------- */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-}
-
-.gallery-item {
-    background: #f6f8ff;
-    border-radius: 14px;
-    padding: 8px;
-    border: 1px solid var(--border-soft);
-}
-
-.gallery-img-wrap {
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 6px;
-}
-
-.gallery-img-wrap img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-caption {
-    font-size: 13px;
-}
-
 /* ---------- CONTACT / FORM ---------- */
 
 .two-col {
@@ -422,16 +389,23 @@ body {
     gap: 22px;
 }
 
-.contact-info p {
+.contact-info {
     font-size: 14px;
     color: var(--muted);
-    margin-bottom: 8px;
 }
 
 .contact-info a {
     color: var(--primary);
     text-decoration: none;
     font-weight: 500;
+}
+
+/* stroke वाला box */
+.contact-info-box {
+    background: #f9fbff;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    padding: 14px 14px 10px;
 }
 
 .appointment-form {
@@ -479,6 +453,38 @@ body {
 .pill-list li {
     font-size: 14px;
     margin-bottom: 4px;
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.gallery-item {
+    background: #f6f8ff;
+    border-radius: 14px;
+    padding: 8px;
+    border: 1px solid var(--border-soft);
+}
+
+.gallery-img-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 6px;
+}
+
+.gallery-img-wrap img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    font-size: 13px;
 }
 
 /* ---------- MAP ---------- */
@@ -540,14 +546,6 @@ body {
 }
 
 /* ---------- RESPONSIVE ---------- */
-
-@media (max-width: 1024px) {
-    .stats-grid,
-    .facility-strip,
-    .gallery-grid {
-        gap: 10px;
-    }
-}
 
 @media (max-width: 900px) {
     .header-inner {
@@ -618,7 +616,7 @@ body {
     }
 
     .logo-title-en {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .logo-title-hi {
