@@ -17,13 +17,23 @@ body {
 .top-bar {
   background: #ffffff;
   border-bottom: 2px solid #ff1744;
-  padding: 6px 12px 10px;
-  text-align: center;
+  padding: 6px 12px 8px;
+}
+
+.top-bar-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .top-bar-text {
-  font-size: 0.9rem;
-  margin-bottom: 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 1px 0 #fee2e2, 0 2px 4px rgba(248, 113, 113, 0.6);
 }
 
 .emergency-btn {
@@ -31,7 +41,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  padding: 0.35rem 1.2rem;
+  padding: 0.35rem 1.3rem;
   border-radius: 999px;
   background: #ff1744;
   color: #ffffff;
@@ -55,6 +65,13 @@ body {
   100% {
     opacity: 1;
     box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7);
+  }
+}
+
+@media (min-width: 768px) {
+  .top-bar-inner {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -319,7 +336,7 @@ main {
   margin-right: 6px;
 }
 
-/* 🔬 CHECKUP GRID */
+/* 🔬 CHECKUP GRID (using checkup.png sprite) */
 .checkup-grid {
   margin-top: 6px;
   display: grid;
@@ -353,12 +370,11 @@ main {
   margin: 0 auto;
   background-image: url("checkup.png");
   background-repeat: no-repeat;
-  background-size: 200% 400%; /* 2 columns × 4 rows sprite approx */
+  background-size: 200% 300%; /* 2 columns x 4 rows approx */
   box-shadow: 0 6px 14px rgba(15, 23, 42, 0.15);
 }
 
-/* sprite positions अनुमान से सेट किये हैं,
-   जरूरत पड़े तो बाद में थोड़ा ऊपर-नीचे कर सकते हैं */
+/* sprite positions – जरूरत हो तो बाद में थोड़ा adjust कर सकते हैं */
 .check-bp .checkup-icon       { background-position: 0%   0%;   }
 .check-pulse .checkup-icon    { background-position: 100% 0%;   }
 .check-thermo1 .checkup-icon  { background-position: 0%   33%;  }
@@ -479,7 +495,6 @@ main {
 
   .hero-card {
     grid-template-columns: minmax(0, 1fr);
-    text-align: left;
   }
 
   .hospital-title,
