@@ -618,3 +618,25 @@ body {
 .footer-links a {
   color: #f9fafb;
 }
+
+.checkup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.checkup-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.checkup-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
