@@ -26,32 +26,85 @@ body {
   align-items: center;
 }
 
+.top-bar-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* MAIN NAV BAR */
 .main-nav {
   background: #000;
   color: #fff;
   padding: 8px 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 8px;
   position: sticky;
   top: 0;
   z-index: 20;
 }
 
-.main-nav-logo {
+/* Left part: 3D logo + text */
+.main-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-3d {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #42a5f5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.main-nav-logo-text {
   font-weight: 600;
   font-size: 14px;
 }
 
-.main-nav-links {
+/* Hamburger button */
+.nav-toggle {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+}
+
+/* Menu links (collapsible on mobile) */
+.main-nav-links {
+  display: none;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.main-nav a {
+.main-nav-links.open {
+  display: flex;
+}
+
+.main-nav-links a {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
@@ -60,7 +113,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.main-nav a:hover {
+.main-nav-links a:hover {
   background: #fff;
   color: #000;
 }
@@ -96,6 +149,15 @@ body {
 .hero p {
   font-size: 13px;
   line-height: 1.6;
+}
+
+.hero-badges {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.hero-actions {
+  margin-top: 16px;
 }
 
 /* BUTTONS */
@@ -176,7 +238,7 @@ main {
   margin-bottom: 2px;
 }
 
-/* FACILITY PHOTO STRIP (3 PHOTOS) */
+/* FACILITY PHOTO STRIP */
 .facility-photos {
   display: flex;
   flex-wrap: nowrap;
@@ -252,6 +314,18 @@ label {
   font-size: 13px;
 }
 
+.small-note {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* ABOUT POINTS */
+.about-points {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
 /* MAP CARD */
 .map-frame {
   width: 100%;
@@ -305,13 +379,25 @@ footer p {
   }
 }
 
-@media (max-width: 480px) {
-  .main-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
+@media (max-width: 600px) {
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Desktop nav behaviour */
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav-links {
+    display: flex !important;
+    margin-left: auto;
   }
 }
