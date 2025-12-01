@@ -1,24 +1,31 @@
 // WhatsApp / phone number (country code ke saath, + ke bina)
 const WHATSAPP_NUMBER = "919771737437"; // 91 + 9771737437
 
-// call button
+// Call button
 function callNow() {
   window.location.href = "tel:+919771737437";
 }
 
-// scroll to appointment/contact section
+// Scroll to appointment/contact section
 function scrollToAppointment() {
   const el = document.getElementById("contact-us");
   if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
-// footer se WhatsApp open karna
+// Footer WhatsApp open (agar future me use karna ho)
 function openWhatsAppFromFooter() {
   const msg = encodeURIComponent(
-    "नमस्ते डॉक्टर साहब, मैं Lakwa Hospital Obra की वेबसाइट से आपसे अपॉइंटमेंट लेना चाहता/चाहती हूँ।"
+    "नमस्ते डॉक्टर, मैं Lakwa Hospital Obra की वेबसाइट से आपसे अपॉइंटमेंट लेना चाहता/चाहती हूँ।"
   );
   const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + msg;
   window.open(waUrl, "_blank");
+}
+
+// NAV hamburger toggle
+function toggleMenu() {
+  const links = document.getElementById("navLinks");
+  if (!links) return;
+  links.classList.toggle("open");
 }
 
 // WhatsApp appointment form handling
@@ -31,23 +38,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    const date = document.getElementById("date").value;
+    const date = document.getElementById("date").value.trim();
     const problem = document.getElementById("problem").value.trim();
 
     if (!name || !phone) {
-      alert("कृपया नाम और मोबाइल नंबर अनिवार्य रूप से भरें।");
+      alert("कृपया नाम और मोबाइल नंबर ज़रूरी रूप से भरें।");
       return;
     }
 
-    let msg = "नमस्ते डॉक्टर साहब,%0A%0A";
-    msg += "मैं ऑनलाइन अपॉइंटमेंट लेना चाहता/चाहती हूँ:%0A";
-    msg += "नाम: " + name + "%0A";
-    msg += "मोबाइल: " + phone + "%0A";
-    if (date) msg += "पसंदीदा तिथि: " + date + "%0A";
-    if (problem) msg += "समस्या: " + problem + "%0A";
-    msg += "%0Aकृपया सुविधानुसार समय बताने की कृपा करें।";
+    let msg = "नमस्ते डॉक्टर,\n";
+    msg += "मैं आपका मरीज " + name + " हूँ।\n";
+    msg += "मोबाइल नंबर: " + phone + "\n";
+    if (date) msg += "अपॉइंटमेंट की तिथि: " + date + "\n";
+    if (problem) msg += "समस्या: " + problem + "\n";
+    msg += "\nकृपया समय की पुष्टि करें।";
 
-    const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + msg;
+    const encoded = encodeURIComponent(msg);
+    const waUrl = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encoded;
     window.open(waUrl, "_blank");
   });
 });
