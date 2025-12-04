@@ -14,6 +14,11 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 /* TOP TEXT */
 .top-text {
   text-align: center;
@@ -50,9 +55,18 @@ body {
 }
 
 @keyframes blink {
-  0% { transform: translateY(0); box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4); }
-  50% { transform: translateY(-1px); box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.9); }
-  100% { transform: translateY(0); box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4); }
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 0 rgba(248, 113, 113, 0.9);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+  }
 }
 
 /* HEADER / NAVBAR */
@@ -153,8 +167,12 @@ body {
   content: "";
 }
 
-.nav-toggle span::before { top: -5px; }
-.nav-toggle span::after { top: 5px; }
+.nav-toggle span::before {
+  top: -5px;
+}
+.nav-toggle span::after {
+  top: 5px;
+}
 
 /* HERO */
 .hero-card {
@@ -274,7 +292,7 @@ body {
 /* STATS STRIP */
 .stats {
   max-width: 1100px;
-  margin: 18px auto 0;
+  margin: 28px auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -339,49 +357,40 @@ body {
 }
 
 /* CHECKUP GRID */
+.checkup-section {
+  /* already card class ke saath padding/margin le raha hai */
+}
+
 .checkup-grid {
   margin-top: 14px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .checkup-card {
-  background: #f9fafb;
-  border-radius: 15px;
-  padding: 10px 10px 12px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
   text-align: center;
-  box-shadow: 0 6px 16px rgba(148, 163, 184, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.checkup-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .checkup-card h3 {
   font-size: 0.98rem;
-  margin: 6px 0 4px;
+  margin: 4px 0 6px;
 }
 
 .checkup-card p {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
 }
-
-/* SPRITE IMAGE */
-.checkup-img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border-radius: 12px;
-  background-image: url("checkup.png");
-  background-repeat: no-repeat;
-  background-size: 200% 300%;
-}
-
-/* 8 ALAG-ALAG PARTS */
-.checkup-1 { background-position: 0% 0%; }
-.checkup-2 { background-position: 50% 0%; }
-.checkup-3 { background-position: 0% 50%; }
-.checkup-4 { background-position: 50% 50%; }
-.checkup-5 { background-position: 100% 0%; }
-.checkup-6 { background-position: 100% 50%; }
-.checkup-7 { background-position: 0% 100%; }
-.checkup-8 { background-position: 50% 100%; }
 
 /* CONTACT */
 .contact-card .contact-grid {
@@ -466,8 +475,8 @@ body {
 .site-footer {
   margin-top: 18px;
   padding: 14px 16px 22px;
-  background: #020617;
-  color: #cbd5f5;
+  background: #000000;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -480,7 +489,7 @@ body {
 }
 
 .footer-links a {
-  color: #e5e7eb;
+  color: #f9fafb;
   text-decoration: none;
   font-size: 0.85rem;
 }
@@ -501,10 +510,6 @@ body {
   }
 
   .stats {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .checkup-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -559,14 +564,7 @@ body {
   .card {
     margin-inline: 8px;
   }
-}
 
-/* =========================
-   EXTRA FIXES (DECEMBER)
-   ========================= */
-
-/* 1) Doctor ka photo mobile par frame ke andar aur centred */
-@media (max-width: 720px) {
   .hero-photo {
     width: 190px;
     height: 190px;
@@ -574,69 +572,6 @@ body {
 
   .hero-photo img {
     object-fit: cover;
-    /* thoda upar se crop ho, face centre me aaye */
     object-position: 50% 20%;
   }
-}
-
-/* 2) Blue stats boxes ko hero ke thoda niche lana */
-.stats {
-  margin-top: 28px;  /* pehle 18px tha, ab gap zyada ho jayega */
-}
-
-/* 3) Checkup machines ke liye sprite positions sahi karna */
-/* checkup.png = 2 columns x 4 rows (total 8 images) */
-.checkup-img {
-  background-image: url("checkup.png");
-  background-repeat: no-repeat;
-  /* 2 column 4 row ka grid: 200% x 400% */
-  background-size: 200% 400%;
-}
-
-/* Row 1 */
-.checkup-1 { background-position: 0%   0%; }   /* left top  */
-.checkup-2 { background-position: 100% 0%; }   /* right top */
-
-/* Row 2 */
-.checkup-3 { background-position: 0%   33.33%; }
-.checkup-4 { background-position: 100% 33.33%; }
-
-/* Row 3 */
-.checkup-5 { background-position: 0%   66.66%; }
-.checkup-6 { background-position: 100% 66.66%; }
-
-/* Row 4 */
-.checkup-7 { background-position: 0%   100%; }
-.checkup-8 { background-position: 100% 100%; }
-
-/* 4) Footer ko pure black + white text karna */
-.site-footer {
-  background: #000000;
-  color: #ffffff;
-}
-
-.footer-links a {
-  color: #f9fafb;
-}
-
-.checkup-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.checkup-card {
-    background: #fff;
-    padding: 18px;
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.checkup-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: contain;
-    margin-bottom: 10px;
 }
